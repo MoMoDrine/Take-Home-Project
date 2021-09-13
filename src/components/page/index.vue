@@ -55,7 +55,7 @@ export default {
         filterData(data){
             return data.filter(item=>{
                 let name = item.patient.account.firstName+" "+item.patient.account.lastName
-                if(name.includes(this.condition.searchData)){
+                if(name.toLowerCase().includes(this.condition.searchData.toLowerCase())){
                     return item
                 }
             }).filter(item=>{
